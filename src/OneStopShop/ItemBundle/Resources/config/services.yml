@@ -1,0 +1,7 @@
+parameters:
+#    one_stop_shop_item.example.class: OneStopShop\ItemBundle\Example
+
+services:
+#    one_stop_shop_item.example:
+#        class: %one_stop_shop_item.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

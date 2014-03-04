@@ -1,0 +1,20 @@
+one_stop_shop_home:
+    resource: "@OneStopShopHomeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+one_stop_shop_customer:
+    resource: "@OneStopShopCustomerBundle/Resources/config/routing.yml"
+    prefix:   /
+
+one_stop_shop_order:
+    resource: "@OneStopShopOrderBundle/Resources/config/routing.yml"
+    prefix:   /
+
+one_stop_shop_business:
+    resource: "@OneStopShopBusinessBundle/Resources/config/routing.yml"
+    prefix:   /
+
+one_stop_shop_item:
+    resource: "@OneStopShopItemBundle/Resources/config/routing.yml"
+    prefix:   /
+

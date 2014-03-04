@@ -1,0 +1,11 @@
+one_stop_shop_home_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: OneStopShopHomeBundle:Default:index }
+
+index:
+    pattern: /index
+    defaults: { _controller: OneStopShopHomeBundle:Index:index }
+
+login:
+    pattern: /login
+    defaults: { _controller: OneStopShopHomeBundle:Index:login }

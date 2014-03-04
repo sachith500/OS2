@@ -1,0 +1,11 @@
+one_stop_shop_item_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: OneStopShopItemBundle:Default:index }
+
+add_item:
+    pattern: /addItem
+    defaults: { _controller: OneStopShopItemBundle:Item:addItem }
+
+remove_item:
+    pattern: /removeItem
+    defaults: { _controller: OneStopShopItemBundle:Item:removeItem }

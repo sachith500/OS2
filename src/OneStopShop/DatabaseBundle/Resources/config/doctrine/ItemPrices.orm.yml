@@ -1,0 +1,23 @@
+OneStopShop\DatabaseBundle\Entity\ItemPrices:
+    type: entity
+    table: item_prices
+    fields:
+        date:
+            id: true
+            type: date
+            nullable: false
+        price:
+            type: integer
+            unsigned: false
+            nullable: false
+    oneToOne:
+        itemNo:
+            targetEntity: Items
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                item_no:
+                    referencedColumnName: item_no
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

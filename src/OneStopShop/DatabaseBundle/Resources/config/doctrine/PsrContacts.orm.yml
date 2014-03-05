@@ -1,0 +1,24 @@
+OneStopShop\DatabaseBundle\Entity\PsrContacts:
+    type: entity
+    table: psr_contacts
+    fields:
+        contactNo:
+            id: true
+            type: string
+            length: 10
+            fixed: false
+            nullable: false
+            column: contact_no
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        emp:
+            targetEntity: Psrs
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                emp_id:
+                    referencedColumnName: emp_id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

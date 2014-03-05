@@ -1,0 +1,24 @@
+OneStopShop\DatabaseBundle\Entity\VipOrders:
+    type: entity
+    table: vip_orders
+    oneToOne:
+        orderNo:
+            targetEntity: Orders
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                order_no:
+                    referencedColumnName: order_no
+            orphanRemoval: false
+    manyToOne:
+        cid:
+            targetEntity: VipCustomers
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cid:
+                    referencedColumnName: cid
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,3 +1,7 @@
+one_stop_shop_database:
+    resource: "@OneStopShopDatabaseBundle/Resources/config/routing.yml"
+    prefix:   /
+
 one_stop_shop_home:
     resource: "@OneStopShopHomeBundle/Resources/config/routing.yml"
     prefix:   /

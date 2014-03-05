@@ -1,0 +1,24 @@
+OneStopShop\DatabaseBundle\Entity\BusinessContacts:
+    type: entity
+    table: business_contacts
+    fields:
+        contactNo:
+            id: true
+            type: string
+            length: 10
+            fixed: false
+            nullable: false
+            column: contact_no
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        brn:
+            targetEntity: Businesses
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                brn:
+                    referencedColumnName: brn
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

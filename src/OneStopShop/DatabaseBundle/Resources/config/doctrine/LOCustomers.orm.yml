@@ -1,0 +1,25 @@
+OneStopShop\DatabaseBundle\Entity\LOCustomers:
+    type: entity
+    table: l_o_customers
+    fields:
+        creditLimit:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: credit_limit
+        brn:
+            type: string
+            length: 11
+            fixed: false
+            nullable: false
+    oneToOne:
+        cid:
+            targetEntity: Customers
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cid:
+                    referencedColumnName: CID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,7 @@
+parameters:
+#    one_stop_shop_database.example.class: OneStopShop\DatabaseBundle\Example
+
+services:
+#    one_stop_shop_database.example:
+#        class: %one_stop_shop_database.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

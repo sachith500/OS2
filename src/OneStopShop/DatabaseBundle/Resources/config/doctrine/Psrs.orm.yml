@@ -1,0 +1,35 @@
+OneStopShop\DatabaseBundle\Entity\Psrs:
+    type: entity
+    table: psrs
+    fields:
+        empId:
+            id: true
+            type: string
+            length: 11
+            fixed: false
+            nullable: false
+            column: emp_id
+            generator:
+                strategy: IDENTITY
+        name:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+        poBox:
+            type: string
+            length: 10
+            fixed: false
+            nullable: false
+            column: po_box
+        street:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+        city:
+            type: string
+            length: 20
+            fixed: false
+            nullable: false
+    lifecycleCallbacks: {  }

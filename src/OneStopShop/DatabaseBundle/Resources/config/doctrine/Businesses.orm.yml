@@ -1,0 +1,17 @@
+OneStopShop\DatabaseBundle\Entity\Businesses:
+    type: entity
+    table: businesses
+    fields:
+        brn:
+            id: true
+            type: string
+            length: 11
+            fixed: false
+            nullable: false
+            
+        name:
+            type: string
+            length: 25
+            fixed: false
+            nullable: false
+    lifecycleCallbacks: {  }

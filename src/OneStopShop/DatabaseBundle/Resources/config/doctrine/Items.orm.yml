@@ -1,0 +1,27 @@
+OneStopShop\DatabaseBundle\Entity\Items:
+    type: entity
+    table: items
+    fields:
+        itemNo:
+            id: true
+            type: string
+            length: 11
+            fixed: false
+            nullable: false
+            column: item_no
+            generator:
+                strategy: IDENTITY
+        description:
+            type: string
+            length: 300
+            fixed: false
+            nullable: false
+    manyToMany:
+        orderNo:
+            targetEntity: Orders
+            cascade: {  }
+            mappedBy: itemNo
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

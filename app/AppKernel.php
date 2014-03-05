@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new OneStopShop\OrderBundle\OneStopShopOrderBundle(),
             new OneStopShop\CustomerBundle\OneStopShopCustomerBundle(),
             new OneStopShop\HomeBundle\OneStopShopHomeBundle(),
+            new OneStopShop\DatabaseBundle\OneStopShopDatabaseBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

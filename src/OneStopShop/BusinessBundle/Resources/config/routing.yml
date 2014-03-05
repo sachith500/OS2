@@ -1,3 +1,7 @@
 one_stop_shop_business_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: OneStopShopBusinessBundle:Default:index }
+
+add_business:
+    pattern: /addBusiness
+    defaults: { _controller: OneStopShopBusinessBundle:Business:addBusiness }

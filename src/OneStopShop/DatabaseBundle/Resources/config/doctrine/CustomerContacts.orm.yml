@@ -1,0 +1,24 @@
+OneStopShop\DatabaseBundle\Entity\CustomerContacts:
+    type: entity
+    table: customer_contacts
+    fields:
+        contactNo:
+            id: true
+            type: string
+            length: 10
+            fixed: false
+            nullable: false
+            column: contact_no
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        cid:
+            targetEntity: Customers
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cid:
+                    referencedColumnName: CID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,25 @@
+OneStopShop\DatabaseBundle\Entity\MoCustomers:
+    type: entity
+    table: mo_customers
+    fields:
+        email:
+            type: string
+            length: 25
+            fixed: false
+            nullable: false
+        trn:
+            type: string
+            length: 20
+            fixed: false
+            nullable: false
+    oneToOne:
+        cid:
+            targetEntity: Customers
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cid:
+                    referencedColumnName: CID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

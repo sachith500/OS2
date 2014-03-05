@@ -1,0 +1,48 @@
+OneStopShop\DatabaseBundle\Entity\Customers:
+    type: entity
+    table: customers
+    fields:
+        cid:
+            id: true
+            type: string
+            length: 11
+            fixed: false
+            nullable: false
+            column: CID
+            generator:
+                strategy: IDENTITY
+        firstName:
+            type: string
+            length: 20
+            fixed: false
+            nullable: false
+            column: first_name
+        middleName:
+            type: string
+            length: 20
+            fixed: false
+            nullable: true
+            column: middle_name
+        lastName:
+            type: string
+            length: 20
+            fixed: false
+            nullable: false
+            column: last_name
+        poBox:
+            type: string
+            length: 5
+            fixed: false
+            nullable: true
+            column: po_box
+        street:
+            type: string
+            length: 15
+            fixed: false
+            nullable: true
+        city:
+            type: string
+            length: 20
+            fixed: false
+            nullable: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,24 @@
+OneStopShop\DatabaseBundle\Entity\MailOrders:
+    type: entity
+    table: mail_orders
+    oneToOne:
+        orderNo:
+            targetEntity: Orders
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                order_no:
+                    referencedColumnName: order_no
+            orphanRemoval: false
+    manyToOne:
+        cid:
+            targetEntity: MoCustomers
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cid:
+                    referencedColumnName: cid
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

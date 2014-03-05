@@ -1,0 +1,26 @@
+OneStopShop\DatabaseBundle\Entity\VipCustomers:
+    type: entity
+    table: vip_customers
+    fields:
+        trn:
+            type: string
+            length: 20
+            fixed: false
+            nullable: false
+            column: TRN
+        creditLimit:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: credit_limit
+    oneToOne:
+        cid:
+            targetEntity: Customers
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cid:
+                    referencedColumnName: CID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

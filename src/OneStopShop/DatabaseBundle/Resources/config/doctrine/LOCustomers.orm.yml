@@ -7,6 +7,11 @@ OneStopShop\DatabaseBundle\Entity\LOCustomers:
             unsigned: false
             nullable: true
             column: credit_limit
+        creditBalance:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: credit_balance
         brn:
             type: string
             length: 11

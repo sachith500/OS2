@@ -2,10 +2,15 @@ OneStopShop\DatabaseBundle\Entity\ItemPrices:
     type: entity
     table: item_prices
     fields:
-        date:
+        startDate:
             id: true
             type: date
             nullable: false
+            column: start_date
+        endDate:
+            type: date
+            nullable: false
+            column: end_date
         price:
             type: integer
             unsigned: false

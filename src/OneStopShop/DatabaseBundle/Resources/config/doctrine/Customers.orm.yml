@@ -8,8 +8,7 @@ OneStopShop\DatabaseBundle\Entity\Customers:
             unsigned: false
             nullable: false
             column: CID
-            generator:
-                strategy: IDENTITY
+            
         firstName:
             type: string
             length: 20

@@ -52,4 +52,17 @@ class CustomerContacts
     {
         return $this->cid;
     }
+
+    /**
+     * Set contactNo
+     *
+     * @param string $contactNo
+     * @return CustomerContacts
+     */
+    public function setContactNo($contactNo)
+    {
+        $this->contactNo = $contactNo;
+    
+        return $this;
+    }
 }

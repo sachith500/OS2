@@ -9,7 +9,7 @@ OneStopShop\DatabaseBundle\Entity\Orders:
             nullable: false
             column: order_no
             generator:
-                strategy: IDENTITY
+                strategy: AUTO
         date:
             type: date
             nullable: false

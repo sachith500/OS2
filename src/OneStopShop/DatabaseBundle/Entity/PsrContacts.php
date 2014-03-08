@@ -52,4 +52,17 @@ class PsrContacts
     {
         return $this->emp;
     }
+
+    /**
+     * Set contactNo
+     *
+     * @param string $contactNo
+     * @return PsrContacts
+     */
+    public function setContactNo($contactNo)
+    {
+        $this->contactNo = $contactNo;
+    
+        return $this;
+    }
 }

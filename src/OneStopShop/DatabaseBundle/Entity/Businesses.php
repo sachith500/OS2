@@ -29,12 +29,6 @@ class Businesses
     {
         return $this->brn;
     }
-    
-    public function setBrn($brn)
-    {
-        $this->brn =$brn;
-        return $this;
-    }
 
     /**
      * Set name

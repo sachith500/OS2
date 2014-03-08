@@ -12,7 +12,12 @@ class ItemPrices
     /**
      * @var \DateTime
      */
-    private $date;
+    private $startDate;
+
+    /**
+     * @var \DateTime
+     */
+    private $endDate;
 
     /**
      * @var integer
@@ -23,85 +28,6 @@ class ItemPrices
      * @var \OneStopShop\DatabaseBundle\Entity\Items
      */
     private $itemNo;
-
-
-    /**
-     * Set date
-     *
-     * @param \DateTime $date
-     * @return ItemPrices
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
-    
-        return $this;
-    }
-
-    /**
-     * Get date
-     *
-     * @return \DateTime 
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-
-    /**
-     * Set price
-     *
-     * @param integer $price
-     * @return ItemPrices
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-    
-        return $this;
-    }
-
-    /**
-     * Get price
-     *
-     * @return integer 
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * Set itemNo
-     *
-     * @param \OneStopShop\DatabaseBundle\Entity\Items $itemNo
-     * @return ItemPrices
-     */
-    public function setItemNo(\OneStopShop\DatabaseBundle\Entity\Items $itemNo = null)
-    {
-        $this->itemNo = $itemNo;
-    
-        return $this;
-    }
-
-    /**
-     * Get itemNo
-     *
-     * @return \OneStopShop\DatabaseBundle\Entity\Items 
-     */
-    public function getItemNo()
-    {
-        return $this->itemNo;
-    }
-    /**
-     * @var \DateTime
-     */
-    private $startDate;
-
-    /**
-     * @var \DateTime
-     */
-    private $endDate;
 
 
     /**
@@ -148,5 +74,51 @@ class ItemPrices
     public function getEndDate()
     {
         return $this->endDate;
+    }
+
+    /**
+     * Set price
+     *
+     * @param integer $price
+     * @return ItemPrices
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return integer 
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set itemNo
+     *
+     * @param \OneStopShop\DatabaseBundle\Entity\Items $itemNo
+     * @return ItemPrices
+     */
+    public function setItemNo(\OneStopShop\DatabaseBundle\Entity\Items $itemNo = null)
+    {
+        $this->itemNo = $itemNo;
+    
+        return $this;
+    }
+
+    /**
+     * Get itemNo
+     *
+     * @return \OneStopShop\DatabaseBundle\Entity\Items 
+     */
+    public function getItemNo()
+    {
+        return $this->itemNo;
     }
 }

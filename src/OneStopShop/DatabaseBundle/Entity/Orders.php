@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Orders
 {
     /**
-     * @var string
+     * @var integer
      */
     private $orderNo;
 
@@ -35,7 +35,7 @@ class Orders
     /**
      * Get orderNo
      *
-     * @return string 
+     * @return integer 
      */
     public function getOrderNo()
     {

@@ -20,6 +20,11 @@ class VipCustomers
     private $creditLimit;
 
     /**
+     * @var integer
+     */
+    private $creditBalance;
+
+    /**
      * @var \OneStopShop\DatabaseBundle\Entity\Customers
      */
     private $cid;
@@ -72,34 +77,6 @@ class VipCustomers
     }
 
     /**
-     * Set cid
-     *
-     * @param \OneStopShop\DatabaseBundle\Entity\Customers $cid
-     * @return VipCustomers
-     */
-    public function setCid(\OneStopShop\DatabaseBundle\Entity\Customers $cid = null)
-    {
-        $this->cid = $cid;
-    
-        return $this;
-    }
-
-    /**
-     * Get cid
-     *
-     * @return \OneStopShop\DatabaseBundle\Entity\Customers 
-     */
-    public function getCid()
-    {
-        return $this->cid;
-    }
-    /**
-     * @var integer
-     */
-    private $creditBalance;
-
-
-    /**
      * Set creditBalance
      *
      * @param integer $creditBalance
@@ -120,5 +97,28 @@ class VipCustomers
     public function getCreditBalance()
     {
         return $this->creditBalance;
+    }
+
+    /**
+     * Set cid
+     *
+     * @param \OneStopShop\DatabaseBundle\Entity\Customers $cid
+     * @return VipCustomers
+     */
+    public function setCid(\OneStopShop\DatabaseBundle\Entity\Customers $cid = null)
+    {
+        $this->cid = $cid;
+    
+        return $this;
+    }
+
+    /**
+     * Get cid
+     *
+     * @return \OneStopShop\DatabaseBundle\Entity\Customers 
+     */
+    public function getCid()
+    {
+        return $this->cid;
     }
 }

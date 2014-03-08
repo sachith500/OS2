@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Customers
 {
     /**
-     * @var string
+     * @var integer
      */
     private $cid;
 
@@ -48,7 +48,7 @@ class Customers
     /**
      * Get cid
      *
-     * @return string 
+     * @return integer 
      */
     public function getCid()
     {

@@ -15,6 +15,11 @@ class LOCustomers
     private $creditLimit;
 
     /**
+     * @var integer
+     */
+    private $creditBalance;
+
+    /**
      * @var string
      */
     private $brn;
@@ -46,6 +51,29 @@ class LOCustomers
     public function getCreditLimit()
     {
         return $this->creditLimit;
+    }
+
+    /**
+     * Set creditBalance
+     *
+     * @param integer $creditBalance
+     * @return LOCustomers
+     */
+    public function setCreditBalance($creditBalance)
+    {
+        $this->creditBalance = $creditBalance;
+    
+        return $this;
+    }
+
+    /**
+     * Get creditBalance
+     *
+     * @return integer 
+     */
+    public function getCreditBalance()
+    {
+        return $this->creditBalance;
     }
 
     /**
@@ -92,33 +120,5 @@ class LOCustomers
     public function getCid()
     {
         return $this->cid;
-    }
-    /**
-     * @var integer
-     */
-    private $creditBalance;
-
-
-    /**
-     * Set creditBalance
-     *
-     * @param integer $creditBalance
-     * @return LOCustomers
-     */
-    public function setCreditBalance($creditBalance)
-    {
-        $this->creditBalance = $creditBalance;
-    
-        return $this;
-    }
-
-    /**
-     * Get creditBalance
-     *
-     * @return integer 
-     */
-    public function getCreditBalance()
-    {
-        return $this->creditBalance;
     }
 }

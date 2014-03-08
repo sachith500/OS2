@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Psrs
 {
     /**
-     * @var string
+     * @var integer
      */
     private $empId;
 
@@ -38,7 +38,7 @@ class Psrs
     /**
      * Get empId
      *
-     * @return string 
+     * @return integer 
      */
     public function getEmpId()
     {

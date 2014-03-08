@@ -10,9 +10,14 @@ use Doctrine\ORM\Mapping as ORM;
 class Items
 {
     /**
-     * @var string
+     * @var integer
      */
     private $itemNo;
+
+    /**
+     * @var string
+     */
+    private $name;
 
     /**
      * @var string
@@ -35,11 +40,34 @@ class Items
     /**
      * Get itemNo
      *
-     * @return string 
+     * @return integer 
      */
     public function getItemNo()
     {
         return $this->itemNo;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Items
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 
     /**
@@ -96,61 +124,5 @@ class Items
     public function getOrderNo()
     {
         return $this->orderNo;
-    }
-    /**
-     * @var string
-     */
-    private $name;
-
-    /**
-     * @var integer
-     */
-    private $price;
-
-
-    /**
-     * Set name
-     *
-     * @param string $name
-     * @return Items
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string 
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Set price
-     *
-     * @param integer $price
-     * @return Items
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-    
-        return $this;
-    }
-
-    /**
-     * Get price
-     *
-     * @return integer 
-     */
-    public function getPrice()
-    {
-        return $this->price;
     }
 }

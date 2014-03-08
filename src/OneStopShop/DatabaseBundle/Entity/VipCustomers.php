@@ -93,4 +93,32 @@ class VipCustomers
     {
         return $this->cid;
     }
+    /**
+     * @var integer
+     */
+    private $creditBalance;
+
+
+    /**
+     * Set creditBalance
+     *
+     * @param integer $creditBalance
+     * @return VipCustomers
+     */
+    public function setCreditBalance($creditBalance)
+    {
+        $this->creditBalance = $creditBalance;
+    
+        return $this;
+    }
+
+    /**
+     * Get creditBalance
+     *
+     * @return integer 
+     */
+    public function getCreditBalance()
+    {
+        return $this->creditBalance;
+    }
 }

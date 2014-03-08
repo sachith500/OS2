@@ -4,9 +4,8 @@ OneStopShop\DatabaseBundle\Entity\Customers:
     fields:
         cid:
             id: true
-            type: string
-            length: 11
-            fixed: false
+            type: integer
+            unsigned: false
             nullable: false
             column: CID
             generator:

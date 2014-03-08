@@ -4,9 +4,8 @@ OneStopShop\DatabaseBundle\Entity\Psrs:
     fields:
         empId:
             id: true
-            type: string
-            length: 11
-            fixed: false
+            type: integer
+            unsigned: false
             nullable: false
             column: emp_id
             generator:

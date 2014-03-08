@@ -4,9 +4,8 @@ OneStopShop\DatabaseBundle\Entity\Orders:
     fields:
         orderNo:
             id: true
-            type: string
-            length: 11
-            fixed: false
+            type: integer
+            unsigned: false
             nullable: false
             column: order_no
             generator:

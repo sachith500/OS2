@@ -13,6 +13,11 @@ OneStopShop\DatabaseBundle\Entity\VipCustomers:
             unsigned: false
             nullable: true
             column: credit_limit
+        creditBalance:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: credit_balance
     oneToOne:
         cid:
             targetEntity: Customers

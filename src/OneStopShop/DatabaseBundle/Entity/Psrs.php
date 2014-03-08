@@ -136,4 +136,17 @@ class Psrs
     {
         return $this->city;
     }
+
+    /**
+     * Set empId
+     *
+     * @param integer $empId
+     * @return Psrs
+     */
+    public function setEmpId($empId)
+    {
+        $this->empId = $empId;
+    
+        return $this;
+    }
 }

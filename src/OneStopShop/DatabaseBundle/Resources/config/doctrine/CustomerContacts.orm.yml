@@ -9,8 +9,7 @@ OneStopShop\DatabaseBundle\Entity\CustomerContacts:
             fixed: false
             nullable: false
             column: contact_no
-            generator:
-                strategy: IDENTITY
+            
     manyToOne:
         cid:
             targetEntity: Customers

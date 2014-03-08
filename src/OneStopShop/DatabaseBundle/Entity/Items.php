@@ -125,4 +125,17 @@ class Items
     {
         return $this->name;
     }
+
+    /**
+     * Set itemNo
+     *
+     * @param integer $itemNo
+     * @return Items
+     */
+    public function setItemNo($itemNo)
+    {
+        $this->itemNo = $itemNo;
+    
+        return $this;
+    }
 }

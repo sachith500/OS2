@@ -52,4 +52,17 @@ class BusinessContacts
     {
         return $this->brn;
     }
+
+    /**
+     * Set contactNo
+     *
+     * @param string $contactNo
+     * @return BusinessContacts
+     */
+    public function setContactNo($contactNo)
+    {
+        $this->contactNo = $contactNo;
+    
+        return $this;
+    }
 }

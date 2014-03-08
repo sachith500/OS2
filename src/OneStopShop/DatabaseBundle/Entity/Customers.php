@@ -192,4 +192,17 @@ class Customers
     {
         return $this->city;
     }
+
+    /**
+     * Set cid
+     *
+     * @param integer $cid
+     * @return Customers
+     */
+    public function setCid($cid)
+    {
+        $this->cid = $cid;
+    
+        return $this;
+    }
 }

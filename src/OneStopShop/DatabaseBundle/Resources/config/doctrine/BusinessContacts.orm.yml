@@ -9,7 +9,8 @@ OneStopShop\DatabaseBundle\Entity\BusinessContacts:
             fixed: false
             nullable: false
             column: contact_no
-            
+            generator:
+                strategy: IDENTITY
     manyToOne:
         brn:
             targetEntity: Businesses

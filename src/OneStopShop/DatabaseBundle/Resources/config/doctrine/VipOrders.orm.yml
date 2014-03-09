@@ -1,7 +1,15 @@
 OneStopShop\DatabaseBundle\Entity\VipOrders:
     type: entity
     table: vip_orders
-    oneToOne:
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+    manyToOne:
         orderNo:
             targetEntity: Orders
             cascade: {  }
@@ -11,7 +19,6 @@ OneStopShop\DatabaseBundle\Entity\VipOrders:
                 order_no:
                     referencedColumnName: order_no
             orphanRemoval: false
-    manyToOne:
         cid:
             targetEntity: VipCustomers
             cascade: {  }

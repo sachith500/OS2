@@ -2,6 +2,13 @@ OneStopShop\DatabaseBundle\Entity\MoCustomers:
     type: entity
     table: mo_customers
     fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
         email:
             type: string
             length: 25
@@ -12,7 +19,7 @@ OneStopShop\DatabaseBundle\Entity\MoCustomers:
             length: 20
             fixed: false
             nullable: false
-    oneToOne:
+    manyToOne:
         cid:
             targetEntity: Customers
             cascade: {  }

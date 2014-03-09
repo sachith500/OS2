@@ -9,7 +9,8 @@ OneStopShop\DatabaseBundle\Entity\PsrContacts:
             fixed: false
             nullable: false
             column: contact_no
-            
+            generator:
+                strategy: IDENTITY
     manyToOne:
         emp:
             targetEntity: Psrs

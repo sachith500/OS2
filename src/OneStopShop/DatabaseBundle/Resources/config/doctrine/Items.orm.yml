@@ -8,7 +8,8 @@ OneStopShop\DatabaseBundle\Entity\Items:
             unsigned: false
             nullable: false
             column: item_no
-            
+            generator:
+                strategy: IDENTITY
         name:
             type: string
             length: 30
@@ -19,12 +20,4 @@ OneStopShop\DatabaseBundle\Entity\Items:
             length: 300
             fixed: false
             nullable: true
-    manyToMany:
-        orderNo:
-            targetEntity: Orders
-            cascade: {  }
-            mappedBy: itemNo
-            inversedBy: null
-            joinTable: null
-            orderBy: null
     lifecycleCallbacks: {  }

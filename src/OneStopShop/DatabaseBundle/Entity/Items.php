@@ -2,13 +2,25 @@
 
 namespace OneStopShop\DatabaseBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Items
  */
-class Items
-{
+class Items {
+
+    protected $itemPrice;
+    
+    public function getItemPrice(){
+        return $this->itemPrice;
+    }
+    
+    public function setItemPrice($price){
+        $this->itemPrice=$price;
+        return $this;
+    }
+
     /**
      * @var string
      */
@@ -27,18 +39,16 @@ class Items
     /**
      * Constructor
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->orderNo = new \Doctrine\Common\Collections\ArrayCollection();
     }
-    
+
     /**
      * Get itemNo
      *
      * @return string 
      */
-    public function getItemNo()
-    {
+    public function getItemNo() {
         return $this->itemNo;
     }
 
@@ -48,10 +58,9 @@ class Items
      * @param string $description
      * @return Items
      */
-    public function setDescription($description)
-    {
+    public function setDescription($description) {
         $this->description = $description;
-    
+
         return $this;
     }
 
@@ -60,8 +69,7 @@ class Items
      *
      * @return string 
      */
-    public function getDescription()
-    {
+    public function getDescription() {
         return $this->description;
     }
 
@@ -71,10 +79,9 @@ class Items
      * @param \OneStopShop\DatabaseBundle\Entity\Orders $orderNo
      * @return Items
      */
-    public function addOrderNo(\OneStopShop\DatabaseBundle\Entity\Orders $orderNo)
-    {
+    public function addOrderNo(\OneStopShop\DatabaseBundle\Entity\Orders $orderNo) {
         $this->orderNo[] = $orderNo;
-    
+
         return $this;
     }
 
@@ -83,8 +90,7 @@ class Items
      *
      * @param \OneStopShop\DatabaseBundle\Entity\Orders $orderNo
      */
-    public function removeOrderNo(\OneStopShop\DatabaseBundle\Entity\Orders $orderNo)
-    {
+    public function removeOrderNo(\OneStopShop\DatabaseBundle\Entity\Orders $orderNo) {
         $this->orderNo->removeElement($orderNo);
     }
 
@@ -93,15 +99,14 @@ class Items
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getOrderNo()
-    {
+    public function getOrderNo() {
         return $this->orderNo;
     }
+
     /**
      * @var string
      */
     private $name;
-
 
     /**
      * Set name
@@ -109,10 +114,9 @@ class Items
      * @param string $name
      * @return Items
      */
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
-    
+
         return $this;
     }
 
@@ -121,8 +125,7 @@ class Items
      *
      * @return string 
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
@@ -132,10 +135,10 @@ class Items
      * @param integer $itemNo
      * @return Items
      */
-    public function setItemNo($itemNo)
-    {
+    public function setItemNo($itemNo) {
         $this->itemNo = $itemNo;
-    
+        
         return $this;
     }
+
 }

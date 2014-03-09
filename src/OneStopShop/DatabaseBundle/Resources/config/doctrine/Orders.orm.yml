@@ -9,25 +9,8 @@ OneStopShop\DatabaseBundle\Entity\Orders:
             nullable: false
             column: order_no
             generator:
-                strategy: AUTO
+                strategy: IDENTITY
         date:
             type: date
             nullable: false
-    manyToMany:
-        itemNo:
-            targetEntity: Items
-            cascade: {  }
-            mappedBy: null
-            inversedBy: orderNo
-            joinTable:
-                name: item_orders
-                joinColumns:
-                    -
-                        name: order_no
-                        referencedColumnName: order_no
-                inverseJoinColumns:
-                    -
-                        name: item_no
-                        referencedColumnName: item_no
-            orderBy: null
     lifecycleCallbacks: {  }

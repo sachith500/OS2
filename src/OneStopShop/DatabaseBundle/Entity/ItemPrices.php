@@ -4,15 +4,12 @@ namespace OneStopShop\DatabaseBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * ItemPrices
  */
 class ItemPrices
 {
-    /**
-     * @var \DateTime
-     */
-    private $date;
 
     /**
      * @var integer
@@ -25,28 +22,6 @@ class ItemPrices
     private $itemNo;
 
 
-    /**
-     * Set date
-     *
-     * @param \DateTime $date
-     * @return ItemPrices
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
-    
-        return $this;
-    }
-
-    /**
-     * Get date
-     *
-     * @return \DateTime 
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
 
     /**
      * Set price
@@ -110,7 +85,7 @@ class ItemPrices
      * @param \DateTime $startDate
      * @return ItemPrices
      */
-    public function setStartDate($startDate)
+    public function setStartDate(\DateTime $startDate)
     {
         $this->startDate = $startDate;
     
@@ -133,7 +108,7 @@ class ItemPrices
      * @param \DateTime $endDate
      * @return ItemPrices
      */
-    public function setEndDate($endDate)
+    public function setEndDate(\DateTime $endDate)
     {
         $this->endDate = $endDate;
     
@@ -148,5 +123,20 @@ class ItemPrices
     public function getEndDate()
     {
         return $this->endDate;
+    }
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 }

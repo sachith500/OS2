@@ -8,7 +8,8 @@ OneStopShop\DatabaseBundle\Entity\Psrs:
             unsigned: false
             nullable: false
             column: emp_id
-            
+            generator:
+                strategy: IDENTITY
         name:
             type: string
             length: 50

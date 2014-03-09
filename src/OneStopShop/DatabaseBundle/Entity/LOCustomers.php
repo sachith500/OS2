@@ -121,4 +121,19 @@ class LOCustomers
     {
         return $this->creditBalance;
     }
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }

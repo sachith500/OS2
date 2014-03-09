@@ -2,6 +2,13 @@ OneStopShop\DatabaseBundle\Entity\LOCustomers:
     type: entity
     table: l_o_customers
     fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
         creditLimit:
             type: integer
             unsigned: false
@@ -17,7 +24,7 @@ OneStopShop\DatabaseBundle\Entity\LOCustomers:
             length: 11
             fixed: false
             nullable: false
-    oneToOne:
+    manyToOne:
         cid:
             targetEntity: Customers
             cascade: {  }

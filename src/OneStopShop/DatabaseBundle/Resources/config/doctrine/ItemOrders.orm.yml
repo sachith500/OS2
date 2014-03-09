@@ -1,6 +1,6 @@
-OneStopShop\DatabaseBundle\Entity\ItemPrices:
+OneStopShop\DatabaseBundle\Entity\ItemOrders:
     type: entity
-    table: item_prices
+    table: item_orders
     fields:
         id:
             id: true
@@ -9,19 +9,20 @@ OneStopShop\DatabaseBundle\Entity\ItemPrices:
             nullable: false
             generator:
                 strategy: IDENTITY
-        startDate:
-            type: date
-            nullable: false
-            column: start_date
-        endDate:
-            type: date
-            nullable: false
-            column: end_date
-        price:
+        quantity:
             type: integer
             unsigned: false
             nullable: false
     manyToOne:
+        orderNo:
+            targetEntity: Orders
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                order_no:
+                    referencedColumnName: order_no
+            orphanRemoval: false
         itemNo:
             targetEntity: Items
             cascade: {  }

@@ -1,3 +1,11 @@
 one_stop_shop_order_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: OneStopShopOrderBundle:Default:index }
+
+OneStopShopOrderBundle_newOrder:
+    resource: "@OneStopShopOrderBundle/Resources/config/routing/newOrder.php"
+    prefix:   /newOrder
+
+#newOrder:
+#    pattern: /newOrder
+#    defaults: { _controller: OneStopShopOrderBundle:newOrder:index }

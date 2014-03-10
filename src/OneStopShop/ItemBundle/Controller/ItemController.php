@@ -20,6 +20,8 @@ class ItemController extends Controller
         if($form->isValid()){
             $price = $item->getItemPrice();
             $price->setStartDate(new \DateTime());
+            $price->setEndDate(new \DateTime("9999-12-31"));
+            $price->setItemNo($item);
             $em = $this->getDoctrine()->getManager();
             $em->persist($item);
             $em->persist($price);
@@ -38,5 +40,14 @@ class ItemController extends Controller
     public function indexAction()
     {
     }
-
+    
+    public function searchItemAction(Request $request){
+       
+        
+        $form = $this->createFormBuilder()
+                ->add('itemName','text')
+                ->add('find','submit');
+        
+        return $this->render('OneStopShopItemBundle:Item:searchItem.html.twig');
+    }
 }

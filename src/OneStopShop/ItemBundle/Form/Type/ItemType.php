@@ -11,15 +11,13 @@ namespace OneStopShop\ItemBundle\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-
 class ItemType extends AbstractType {
 
     public function buildForm(FormBuilderInterface $builder, array $options) {
         parent::buildForm($builder, $options);
-        $builder->add('itemNo', 'integer', array('label'=>'Item Number'))
-                ->add('name', 'text', array('label'=>'Item Name','max_length'=>30))
-                ->add('description', 'textarea',array('label'=>'Description','max_length'=>300))
-                ->add('itemPrice',new ItemPriceType())
+        $builder->add('name', 'text', array('label' => 'Item Name', 'max_length' => 30))
+                ->add('description', 'textarea', array('label' => 'Description', 'max_length' => 300))
+                ->add('itemPrice', new ItemPriceType())
                 ->add('submit', 'submit')
                 ->add('reset', 'reset');
     }
@@ -28,7 +26,7 @@ class ItemType extends AbstractType {
         parent::setDefaultOptions($resolver);
         $resolver->setDefaults(array(
             'data_class' => 'OneStopShop\DatabaseBundle\Entity\Items',
-            'cascade_validation'=>true
+            'cascade_validation' => true
         ));
     }
 

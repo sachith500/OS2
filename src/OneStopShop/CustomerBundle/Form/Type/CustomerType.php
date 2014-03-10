@@ -15,12 +15,13 @@ class CustomerType extends AbstractType {
 
     public function buildForm(FormBuilderInterface $builder, array $options) {
         parent::buildForm($builder, $options);
-        $builder->add('ID', 'text', array('label' => 'ID', 'max_length' => 50))
-                ->add('First name', 'text', array('label' => 'First Name', 'max_length' => 50))
-                ->add('Middle name', 'text', array('label' => 'Middle Name', 'max_length' => 50))
-                ->add('Last name', 'text', array('label' => 'Last Name', 'max_length' => 50))
-            //    ->add('type', 'textarea', array('label' => 'Description', 'max_length' => 300))
-           //     ->add('itemPrice', new ItemPriceType())
+        $builder->add('cid', 'text', array('label' => 'ID', 'max_length' => 50))
+                ->add('firstName', 'text', array('label' => 'First Name', 'max_length' => 50))
+                ->add('middleName', 'text', array('label' => 'Middle Name', 'max_length' => 50))
+                ->add('lastName', 'text', array('label' => 'Last Name', 'max_length' => 50))
+                ->add('poBox', 'text', array('label' => 'P.O. Box', 'max_length' => 50))
+                ->add('street', 'text', array('label' => 'Street', 'max_length' => 50))
+                ->add('city', 'text', array('label' => 'City', 'max_length' => 50))
                 ->add('submit', 'submit')
                 ->add('reset', 'reset');
     }
@@ -33,8 +34,9 @@ class CustomerType extends AbstractType {
         ));
     }
 
-    public function getName() {
-        return 'customer';
-    }
+public function getName(){
+    return 'customer';
+}
+    
 
 }

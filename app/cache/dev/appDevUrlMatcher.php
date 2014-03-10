@@ -156,12 +156,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'OneStopShop\\HomeBundle\\Controller\\IndexController::loginAction',  '_route' => 'login',);
         }
 
-        if (0 === strpos($pathinfo, '/hello')) {
-            // one_stop_shop_customer_homepage
-            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'one_stop_shop_customer_homepage')), array (  '_controller' => 'OneStopShop\\CustomerBundle\\Controller\\DefaultController::indexAction',));
-            }
+        // one_stop_shop_customer_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'one_stop_shop_customer_homepage')), array (  '_controller' => 'OneStopShop\\CustomerBundle\\Controller\\DefaultController::indexAction',));
+        }
 
+        // add_customer
+        if ($pathinfo === '/addCustomer') {
+            return array (  '_controller' => 'OneStopShop\\CustomerBundle\\Controller\\CustomerController::addCustomerAction',  '_route' => 'add_customer',);
+        }
+
+        if (0 === strpos($pathinfo, '/hello')) {
             // one_stop_shop_order_homepage
             if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'one_stop_shop_order_homepage')), array (  '_controller' => 'OneStopShop\\OrderBundle\\Controller\\DefaultController::indexAction',));

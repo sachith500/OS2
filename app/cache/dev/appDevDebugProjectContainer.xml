@@ -1062,6 +1062,7 @@
               <argument key="entity">form.type.entity</argument>
               <argument key="item">one_stop_shop_item.type.item</argument>
               <argument key="itemPrice">one_stop_shop_item.type.itemprice</argument>
+              <argument key="customer">one_stop_shop_customer.type.customer</argument>
             </argument>
             <argument type="collection">
               <argument key="form" type="collection">
@@ -2333,6 +2334,9 @@
     </service>
     <service id="one_stop_shop_item.type.itemprice" class="OneStopShop\ItemBundle\Form\Type\ItemPriceType">
       <tag name="form.type" alias="itemPrice"/>
+    </service>
+    <service id="one_stop_shop_customer.type.customer" class="OneStopShop\CustomerBundle\Form\Type\CustomerType">
+      <tag name="form.type" alias="customer"/>
     </service>
     <service id="twig.extension.acme.demo" class="Acme\DemoBundle\Twig\Extension\DemoExtension" public="false">
       <tag name="twig.extension"/>

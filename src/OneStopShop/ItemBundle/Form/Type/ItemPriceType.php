@@ -16,11 +16,7 @@ class ItemPriceType extends AbstractType {
     public function buildForm(FormBuilderInterface $builder, array $options) {
         parent::buildForm($builder, $options);
 
-        $builder->add('price', 'money', array('currency' => 'LKR'))
-                ->add('startDate', 'date', array(
-                    'years'=>  range(2000, 9999)
-                    ));
-   
+        $builder->add('price', 'money', array('currency' => 'LKR'));
     }
 
     public function setDefaultOptions(\Symfony\Component\OptionsResolver\OptionsResolverInterface $resolver) {

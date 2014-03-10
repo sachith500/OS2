@@ -54,7 +54,7 @@ class ItemPrices
      */
     public function setItemNo(\OneStopShop\DatabaseBundle\Entity\Items $itemNo = null)
     {
-        $this->itemNo = $itemNo;
+        $this->itemNo = $itemNo  ;
     
         return $this;
     }

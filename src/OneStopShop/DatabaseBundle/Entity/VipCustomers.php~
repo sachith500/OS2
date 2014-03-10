@@ -5,19 +5,19 @@ namespace OneStopShop\DatabaseBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * LOCustomers
+ * VipCustomers
  */
-class LOCustomers
+class VipCustomers
 {
+    /**
+     * @var string
+     */
+    private $trn;
+
     /**
      * @var integer
      */
     private $creditLimit;
-
-    /**
-     * @var string
-     */
-    private $brn;
 
     /**
      * @var \OneStopShop\DatabaseBundle\Entity\Customers
@@ -26,10 +26,33 @@ class LOCustomers
 
 
     /**
+     * Set trn
+     *
+     * @param string $trn
+     * @return VipCustomers
+     */
+    public function setTrn($trn)
+    {
+        $this->trn = $trn;
+    
+        return $this;
+    }
+
+    /**
+     * Get trn
+     *
+     * @return string 
+     */
+    public function getTrn()
+    {
+        return $this->trn;
+    }
+
+    /**
      * Set creditLimit
      *
      * @param integer $creditLimit
-     * @return LOCustomers
+     * @return VipCustomers
      */
     public function setCreditLimit($creditLimit)
     {
@@ -49,33 +72,10 @@ class LOCustomers
     }
 
     /**
-     * Set brn
-     *
-     * @param string $brn
-     * @return LOCustomers
-     */
-    public function setBrn($brn)
-    {
-        $this->brn = $brn;
-    
-        return $this;
-    }
-
-    /**
-     * Get brn
-     *
-     * @return string 
-     */
-    public function getBrn()
-    {
-        return $this->brn;
-    }
-
-    /**
      * Set cid
      *
      * @param \OneStopShop\DatabaseBundle\Entity\Customers $cid
-     * @return LOCustomers
+     * @return VipCustomers
      */
     public function setCid(\OneStopShop\DatabaseBundle\Entity\Customers $cid = null)
     {
@@ -103,7 +103,7 @@ class LOCustomers
      * Set creditBalance
      *
      * @param integer $creditBalance
-     * @return LOCustomers
+     * @return VipCustomers
      */
     public function setCreditBalance($creditBalance)
     {
@@ -135,33 +135,5 @@ class LOCustomers
     public function getId()
     {
         return $this->id;
-    }
-    /**
-     * @var \OneStopShop\DatabaseBundle\Entity\Psrs
-     */
-    private $emp;
-
-
-    /**
-     * Set emp
-     *
-     * @param \OneStopShop\DatabaseBundle\Entity\Psrs $emp
-     * @return LOCustomers
-     */
-    public function setEmp(\OneStopShop\DatabaseBundle\Entity\Psrs $emp = null)
-    {
-        $this->emp = $emp;
-    
-        return $this;
-    }
-
-    /**
-     * Get emp
-     *
-     * @return \OneStopShop\DatabaseBundle\Entity\Psrs 
-     */
-    public function getEmp()
-    {
-        return $this->emp;
     }
 }

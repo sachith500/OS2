@@ -136,32 +136,4 @@ class LOCustomers
     {
         return $this->id;
     }
-    /**
-     * @var \OneStopShop\DatabaseBundle\Entity\Psrs
-     */
-    private $emp;
-
-
-    /**
-     * Set emp
-     *
-     * @param \OneStopShop\DatabaseBundle\Entity\Psrs $emp
-     * @return LOCustomers
-     */
-    public function setEmp(\OneStopShop\DatabaseBundle\Entity\Psrs $emp = null)
-    {
-        $this->emp = $emp;
-    
-        return $this;
-    }
-
-    /**
-     * Get emp
-     *
-     * @return \OneStopShop\DatabaseBundle\Entity\Psrs 
-     */
-    public function getEmp()
-    {
-        return $this->emp;
-    }
 }

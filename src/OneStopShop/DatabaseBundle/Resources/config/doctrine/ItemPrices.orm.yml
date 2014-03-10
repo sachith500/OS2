@@ -8,7 +8,7 @@ OneStopShop\DatabaseBundle\Entity\ItemPrices:
             unsigned: false
             nullable: false
             generator:
-                strategy: AUTO
+                strategy: IDENTITY
         startDate:
             type: date
             nullable: false
@@ -17,7 +17,6 @@ OneStopShop\DatabaseBundle\Entity\ItemPrices:
             type: date
             nullable: false
             column: end_date
-            default: 9999-12-31
         price:
             type: integer
             unsigned: false

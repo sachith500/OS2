@@ -133,9 +133,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // one_stop_shop_home_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'one_stop_shop_home_homepage')), array (  '_controller' => 'OneStopShop\\HomeBundle\\Controller\\DefaultController::indexAction',));
+        if (0 === strpos($pathinfo, '/hello')) {
+            // one_stop_shop_database_homepage
+            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'one_stop_shop_database_homepage')), array (  '_controller' => 'OneStopShop\\DatabaseBundle\\Controller\\DefaultController::indexAction',));
+            }
+
+            // one_stop_shop_home_homepage
+            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'one_stop_shop_home_homepage')), array (  '_controller' => 'OneStopShop\\HomeBundle\\Controller\\DefaultController::indexAction',));
+            }
+
         }
 
         // index
@@ -164,11 +172,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'one_stop_shop_business_homepage')), array (  '_controller' => 'OneStopShop\\BusinessBundle\\Controller\\DefaultController::indexAction',));
             }
 
-            // one_stop_shop_item_homepage
-            if (preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'one_stop_shop_item_homepage')), array (  '_controller' => 'OneStopShop\\ItemBundle\\Controller\\DefaultController::indexAction',));
-            }
+        }
 
+        // add_business
+        if ($pathinfo === '/addBusiness') {
+            return array (  '_controller' => 'OneStopShop\\BusinessBundle\\Controller\\BusinessController::addBusinessAction',  '_route' => 'add_business',);
+        }
+
+        // one_stop_shop_item_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'one_stop_shop_item_homepage')), array (  '_controller' => 'OneStopShop\\ItemBundle\\Controller\\DefaultController::indexAction',));
         }
 
         // add_item

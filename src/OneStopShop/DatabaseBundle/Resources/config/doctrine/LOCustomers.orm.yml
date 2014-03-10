@@ -9,6 +9,10 @@ OneStopShop\DatabaseBundle\Entity\LOCustomers:
             nullable: false
             generator:
                 strategy: IDENTITY
+        cid:
+            type: integer
+            unsigned: false
+            nullable: false
         creditLimit:
             type: integer
             unsigned: false
@@ -25,13 +29,13 @@ OneStopShop\DatabaseBundle\Entity\LOCustomers:
             fixed: false
             nullable: false
     manyToOne:
-        cid:
-            targetEntity: Customers
+        emp:
+            targetEntity: Psrs
             cascade: {  }
             mappedBy: null
             inversedBy: null
             joinColumns:
-                cid:
-                    referencedColumnName: CID
+                emp_id:
+                    referencedColumnName: emp_id
             orphanRemoval: false
     lifecycleCallbacks: {  }

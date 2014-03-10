@@ -18,3 +18,6 @@ ee5f37,127.0.0.1,GET,http://localhost/Zhvillues/OS2/web/app_dev.php/index,139442
 3dff02,127.0.0.1,GET,http://localhost/Zhvillues/OS2/web/app_dev.php/addBusiness,1394422708,
 f08772,127.0.0.1,GET,http://localhost/Zhvillues/OS2/web/app_dev.php/addBusiness,1394422711,
 125840,127.0.0.1,POST,http://localhost/Zhvillues/OS2/web/app_dev.php/addBusiness,1394422711,
+7bed29,::1,GET,http://localhost/OS2/web/app_dev.php/addBusiness,1394451366,
+964774,::1,GET,http://localhost/OS2/web/app_dev.php/addCustomer,1394451375,
+1791ef,::1,GET,http://localhost/OS2/web/app_dev.php/addCustomer,1394451376,
